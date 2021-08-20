@@ -4,8 +4,8 @@ var options = {
   secure:false, 
   rejectUnauthorized: false,
 };
-
-var socket = io('http://3.213.192.193:8091', options);
+//http://3.213.192.193:8091
+var socket = io('http://ec2-3-213-192-193.compute-1.amazonaws.com:8091', options);
 
 socket.on('connect', function() {
   console.log(">> CONNECTION ESTABLISHED!");
