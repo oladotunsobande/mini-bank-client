@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Mono Bank</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.0.1/socket.io.js" integrity="sha512-q/dWJ3kcmjBLU4Qc47E4A9kTB4m3wuTY7vkFJDTZKjTs8jhyGQnaUrxa0Ytd0ssMZhbNua9hE+E7Qv1j+DyZwA==" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+  </head>
+  <body>
+    <h1>Mono Bank Client</h1>
+    <p>
+      <label for="status">Set interactions and toggle errors</label>
+      <input type="text" id="interaction" name="interaction" placeholder="Enter new interaction" />
+    </p>
+    <p>
+      <button id="submit" onclick="setInteractionAndBroadcast()">SUBMIT</button>
+    </p>
+    <p>
+      <button id="error" onclick="setErrorAndBroadcast()">TOGGLE ERROR</button>
+    </p>
+    <p>=====================</p>
+    <p>
+      <label for="status">NOTIFICATIONS:</label>
+    </p>
+    <p id="notifications"></p>
+  </body>
+</html>
